@@ -65,6 +65,7 @@ using namespace std;
 std::cout << "Hello" << std::endl;
 ```
 
+## Программы
 ### Закрашенный прямоугольник из звездочек
 ```c++
 #include <iostream>
