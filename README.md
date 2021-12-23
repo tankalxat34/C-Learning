@@ -1,5 +1,7 @@
-# C_Learning
- Here I'm placing my C++ training programs
+# C++ Learning
+Here I'm placing my C++ training programs
+
+@tankalxat34
 
 # How to use?
 - `C++ Learning.cpp` - the main file
