@@ -16,6 +16,7 @@ Here I'm placing my C++ training programs
 | float  |               4 | Описывает Вещественные числа одинарной точности.                                 | нет                         |
 | double |               8 | Описывает Вещественные числа двойной точности. Хранит больше диапазонов значений | нет                         |
 |        |                 |                                                                                  |                             |
+|        |                 |                                                                                  |                             |
 | int    |               4 | Описывает целые числа                                                            | от -2147...68 до -2147...68 |
 | short  |               2 | Описывает короткие целые числа                                                   | от -32768 до 32768          |
 | long   |               4 | Описывает длинные целые числа                                                    | от -2147...68 до -2147...68 |
@@ -47,7 +48,7 @@ system("pause");
 Библиотека - файл, в котором содержатся описания различных функций, реализованных другими программистами.
 Программа получила возможность использовать функции находящиеся в библиотека iostream
 
-#include - директива препроцессора. То, что выполняется еще на этапе компиляции.
+`#include` - директива препроцессора. То, что выполняется еще на этапе компиляции.
 
 ### Пространства имен
 ```c++
@@ -64,4 +65,70 @@ using namespace std;
 std::cout << "Hello" << std::endl;
 ```
 
+### Закрашенный прямоугольник из звездочек
+```c++
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int WIDTH = 0;
+	int HEIGHT = 0;
+
+	cout << "Введите длину: ";
+	cin >> WIDTH;
+	
+	cout << "Введите высоту: ";
+	cin >> HEIGHT;
+
+	for (int j = 0; j < HEIGHT; j++)
+	{
+		for (int i = 0; i < WIDTH; i++)
+		{
+			cout << "*";
+		};
+		cout << endl;
+	};	
+}
+```
+
+### Прямоугольник из звездочек
+```c++
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	setlocale(LC_ALL, "Rus");
+
+	int WIDTH = 0;
+	int HEIGHT = 0;
+
+	cout << "Введите длину: ";
+	cin >> WIDTH;
+	
+	cout << "Введите высоту: ";
+	cin >> HEIGHT;
+
+	for (int j = 0; j < HEIGHT; j++)
+	{
+		for (int i = 0; i < WIDTH; i++)
+		{
+			if (j == 0 or j == HEIGHT - 1 or i == 0 or i == WIDTH - 1)
+			{
+				cout << "*";
+			}
+			else
+			{
+				cout << " ";
+			};
+		};
+		cout << endl;
+	};	
+}
+```
 
