@@ -1,0 +1,502 @@
+LINK TO FREE RUSSIAN COURSE: https://www.youtube.com/playlist?list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r
+
+---- БАЗОВЫЕ КОНСТРУКЦИИ ----
+setlocale(LC_ALL, "ru"); // делает читаемыми киррилицу
+
+system("pause"); // чтобы окно не закрывалось
+
+
+---- ГЕНЕРАТОР СЛУЧАЙНЫХ ЧИСЕЛ ----
+#include <ctime>
+srand(time(NULL));
+cout << rand()%10 << endl; //выведет число от 0 до 10
+
+
+---- Увеличение и уменьшение на 1 ----
+Постфиксный Инкремент: a++;
+Постфиксный Декремент: a--;
+
+Префиксный Инкремент: ++a;
+Префиксный Декремент: --a;
+
+ОТЛИЧИЕ:
+Постфиксная операция делает действие после других действий
+Префиксная операция делает действие перед другими действиями
+
+
+---- КОРОТКИЕ ОПЕРАЦИИ ----
+a += 5;
+a -= 5;
+a *= 5;
+a /= 5;
+
+---- ОСТАТОК ОТ ДЕЛЕНИЯ ----
+a = a % 2 // остаток от деления на 2
+
+
+---- ОПЕРАЦИИ СРАВНЕНИЯ ----
+< - Меньше
+> - Больше
+<= - Меньше или равно
+>= - Больше или равно
+== - Равно
+!= - Не равно
+
+&& - И
+|| - Или
+!= - Не
+
+---- КОНСТРУКЦИЯ "ЕСЛИ" ----
+if (something == 5)
+{
+	something += 34;
+}
+else if (something == 4)
+{
+	something += 33;
+}
+else
+{
+	something += 32;
+}
+
+
+
+---- КОНСТРУКЦИЯ МНОЖЕСТВЕННОГО ВЫБОРА "switch" ----
+int a;
+cout << "Input any integer: ";
+cin >> a;
+switch (a)
+{
+case 1:
+	cout << "Your digit is 1" << endl;
+	break;
+case 2:
+	cout << "Your digit is 2" << endl;
+	break;
+default:
+	cout << "This is an unknown number" << endl;
+	break;
+}
+
+
+
+---- ЦИКЛ WHILE ----
+while (something < 10)
+{
+	something += 1;
+}
+
+
+
+---- ЦИКЛ DO WHILE ----
+do
+{
+	something += 1;
+} while (something < 20);
+
+
+
+
+---- ЦИКЛ FOR ----
+for (int i = 0; i < length; i++)
+{
+	something += 34;
+}
+
+
+
+---- CONTINUE ----
+for (int i = 0; i < 10; i++)
+{
+	if (i == 5)
+	{
+		continue;
+	}
+	cout << i << endl;
+}
+/* 
+0
+1
+2
+3
+4
+6
+7
+8
+9
+*/
+
+
+---- ФУНКЦИЯ ----
+int Sum(int a, int b)
+{
+	int c = a + b;
+	return c;
+}
+
+
+
+---- МАССИВЫ ----
+int arr[4]; // инициализация массива arr из 4 элементов с мусором
+arr[0] = 5; // нулевому элементу присвоили число 5
+cout << arr[0] << endl; // вывели этот нулевой элемент на экран
+
+int arr[4]{}; // инициализация пустого массива с четырьмя нулями
+int arr[4]{1, 66, 22}; // инициализация массива, последний элемент равен 0
+
+
+---- ЗАПОЛНЕНИЕ МАССИВА И ЕГО ВЫВОД НА ЭКРАН----
+int arr[size];
+for (int i = 0; i < size; i++)
+{
+	arr[i] = i;
+}
+
+for (int i = 0; i < size; i++)
+{
+	cout << arr[i] << endl;
+}
+
+---- SIZEOF ----
+cout << sizeof(int) << endl; // возвращает объем памяти в байтах чего угодно
+
+---- ДЛИНА МАССИВА ----
+int arr[]{22, 55, 886, 124, 74}; // длина 5
+cout << sizeof(arr)/sizeof(int) << endl; // выведет 5, НО если все элементы типа int
+cout << sizeof(arr)/sizeof(arr[0]) << endl; // выведет 5 при любом типе массива
+
+
+
+
+
+
+---- ГЕНЕРАТОР СЛУЧАЙНЫХ ЧИСЕЛ ----
+srand(*param) // установить отправную точку для генерации случайных чисел
+
+
+// код ниже устанавливает отправную точку для генерации случайных чисел
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	srand(time(NULL));
+}
+
+
+// операция ниже генерит случайные числа от 0 до 9
+rand()%10
+
+// а эта от 5 до 15
+rand()%15 + 5;
+
+
+
+---- ГЕНЕРАЦИЯ МАССИВА С УНИКАЛЬНЫМИ ЧИСЛАМИ ----
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	srand(time(NULL));
+	/*от 0 до 20 массив на 10 эл-тов. Элементы уникальные и случайные!*/
+	
+	const int SIZE = 10;
+	int arr[SIZE], new_digit, in_array = false;
+
+	for (int i = 0; i < SIZE; )
+	{
+		new_digit = rand() % 20;
+		for (int j = 0; j < i; j++)
+		{
+			if (new_digit == arr[j])
+			{
+				in_array = true;
+				break;
+			}
+		}
+		if (in_array == false)
+		{
+			arr[i] = new_digit;
+			i++;
+		}
+		in_array = false;
+	}
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << arr[i] << endl;
+	}
+
+
+	system("pause");
+}
+
+
+
+
+---- С ДОПОЛНЕНИЕМ ПО ПОИСКУ НАИМЕНЬШЕГО ЗНАЧЕНИЯ ----
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	srand(time(NULL));
+	/*от 0 до 20 массив на 10 эл-тов. Элементы уникальные и случайные! Затем найти самое маленькое число в массиве*/
+
+	const int SIZE = 10;
+	int arr[SIZE], new_digit, in_array = false, smallest_value=10000;
+
+	for (int i = 0; i < SIZE; )
+	{
+		new_digit = rand() % 20;
+		for (int j = 0; j < i; j++)
+		{
+			if (new_digit == arr[j])
+			{
+				in_array = true;
+				break;
+			}
+		}
+		if (in_array == false)
+		{
+			arr[i] = new_digit;
+			i++;
+		}
+		in_array = false;
+	}
+
+	cout << "The array contains this values: ";
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << arr[i] << ", ";
+	}
+	cout << endl;
+
+	cout << "The smallest value: ";
+	for (int i = 0; i < SIZE; i++)
+	{
+		if (arr[i] < smallest_value)
+		{
+			smallest_value = arr[i];
+		}
+	}
+	cout << smallest_value << endl;
+
+
+	system("pause");
+}
+
+
+
+
+
+
+
+---- ДВУМЕРНЫЙ МАССИВ ----
+const int ROW = 3;
+const int COL = 4;
+
+int arr[ROW][COL];
+
+arr[1][0] = 55; // В строку 1 столбца 0 записали число 55
+
+int arr[ROW][COL]{}; // Инициализация двумерного массива, целиком заполненного нулями
+
+
+---- ЗАПОЛНЕНИЕ ДВУМЕРНОГО МАССИВА ПРИ ИНИЦИАЛИЗАЦИИ ----
+const int ROW = 2;
+const int COL = 4;
+int arr[ROW][COL]
+{ 
+	{2,		66,		34}, 
+	{123,	435,	99},
+	{5654,	69,		547},
+	{234,	568,	566},
+}; // так гораздо удобнее
+
+// Количество колонок указывать обязательно!
+// Строки необязательны!
+
+
+
+
+---- ФУНКЦИИ ----
+
+возвращаемое_значение имя_функции (параметры)
+{
+	блок_повторяющегося_кода (или тело);
+}
+
+
+вернуть void - значит вернуть "ничего"
+
+// НАПРИМЕР:
+int Sum(int a, int b)
+{
+	return a + b;
+}
+
+
+
+
+---- ПАРАМЕТРЫ ФУНКЦИЙ ----
+// Эта программа выведет 1, так как объявляются две совершенно разные переменные.
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void foo(int a)
+{
+	a++;
+}
+
+
+void main()
+{
+	int a = 1;
+	foo(a);
+	cout << a << endl;
+	system("pause");
+}
+
+// Массив постоянен на протяжении всей программы!! 
+
+
+// Эта прога заполняет массив числами и выводит их на экран
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void FillArray(int arr[], const int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+}
+
+
+
+void PrintArray(int arr[], const int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << arr[i] << endl;
+	}
+}
+
+
+
+void main()
+{
+	
+	const int SIZE = 10;
+	int arr[SIZE];
+
+	FillArray(arr, SIZE);
+	PrintArray(arr, SIZE);
+
+	system("pause");
+}
+
+
+
+
+
+
+
+---- ПРОТОТИПЫ ФУНКЦИЙ ----
+// Прототип - это часть уже существующей функции, которая написана после main()
+// Пишется так: void foo();
+// Если у функции есть параметры - передаем их и в прототип функции
+
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void foo();
+
+
+void main()
+{
+	foo();
+	system("pause");
+}
+
+
+void foo()
+{
+	cout << "Hello" << endl;
+}
+
+
+
+
+
+
+
+---- ОБЛАСТЬ ВИДИМОСТИ. ГЛОБАЛЬНЫЕ И ЛОКАЛЬНЫЕ ПЕРЕМЕННЫЕ ----
+
+ПЕРЕМЕННЫЕ, СОЗДАННЫЕ ВНУТРИ {}, КОТОРЫЕ ОТНОСЯТСЯ НЕ К main(), НЕ БУДУТ ВИДНЫ В ПРОГРАММЕ
+
+
+//здесь будет ошибка, что переменная не существует
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+void main()
+{
+	{
+		int a = 5; // эту переменную можно назвать локальной
+	}
+	a = 5;
+}
+
+
+// Глобальную переменную нужнор инициализироать после всех include и using:
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int a = 15;
+
+void main()
+{
+	cout << a << endl; // выведет 15
+}
+
+---- ПАРАМЕТРЫ ПО УМОЛЧАНИЮ ----
+void foo(int a = 5, char simbol = '#')
+{
+	for (int i = 0; i < a; i++)
+	{
+		cout << simbol;
+	}
+}
+
+
+
+---- СЛОВО inline. Встраиваемая функция ----
+inline int Sum(int a, int b)
+{
+	return a + b;
+}
+
+При каждом вызове такой функции компилятор не будет бегать по памяти и тратить время на поиск это функции.
+Она просто вызовется там, где должна.
+
+Однако inline может вызваться не сразу.
+
+Если функция короткая, то приминять такое допустимо.
+Писать такое слово необязательно.
+
+
+Минус: программа занимает немного больше места.
+Плюс: скорость выполнения программы становится чуть быстрее, хотя это не особо заметно на современных ПК.
