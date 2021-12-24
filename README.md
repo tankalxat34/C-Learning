@@ -1,3 +1,4 @@
+![alt](https://pros-cons.net/wp-content/uploads/2018/12/cpp-programming.png)
 # C++ Learning
 Here I'm placing my C++ training programs
 
