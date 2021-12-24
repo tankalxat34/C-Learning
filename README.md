@@ -1,4 +1,4 @@
-![alt](https://pros-cons.net/wp-content/uploads/2018/12/cpp-programming.png)
+![alt](https://itproger.com/paid_courses/img/cpp_profi_icon.png)
 # C++ Learning
 Here I'm placing my C++ training programs
 
