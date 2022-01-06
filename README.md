@@ -189,86 +189,51 @@ cout << a << endl; // выведет -5
 ### Тернарные
 Для действий нужен только 3 операнда
 
-## Программы
-### Просто интересная программа
+### Домашнее задание
+__Введите три числа и выведите на экран значение суммы произведения и среднее арифметическое этих чисел__
+
+#### Мое решение
 ```c++
 #include <iostream>
 using namespace std;
 
 void main()
 {
-	int a, b, c;
+	setlocale(LC_ALL, "ru");
+	double a, b, c;
+
+	cout << "Введите три числа: ";
 	cin >> a >> b >> c;
-	cout << a << b << c;
+
+	cout << "Сумма: " << a + b + c << endl;
+	cout << "Произведение: " << a * b * c << endl;
+	cout << "Среднее: " << (a + b + c)/3 << endl;
 }
 ```
 
+#### Решение с урока
+В этом решении используется приведение типов.
+
+Для того, чтобы изменить тип данных результата какого либо действия нужно написать в скобках необходимый тип данных перед действием, которое выдает этот результат:
+```c++
+cout << "Среднее: " << (double)(a + b + c)/3 << endl;
+```
 
 
-### Закрашенный прямоугольник из звездочек
 ```c++
 #include <iostream>
-#include <ctime>
 using namespace std;
 
 void main()
 {
-	setlocale(LC_ALL, "Rus");
+	setlocale(LC_ALL, "ru");
+	int a, b, c;
 
-	int WIDTH = 0;
-	int HEIGHT = 0;
+	cout << "Введите три числа: " << endl;
+	cin >> a >> b >> c;
 
-	cout << "Введите длину: ";
-	cin >> WIDTH;
-	
-	cout << "Введите высоту: ";
-	cin >> HEIGHT;
-
-	for (int j = 0; j < HEIGHT; j++)
-	{
-		for (int i = 0; i < WIDTH; i++)
-		{
-			cout << "*";
-		};
-		cout << endl;
-	};	
+	cout << "Сумма: " << a + b + c << endl;
+	cout << "Произведение: " << a * b * c << endl;
+	cout << "Среднее: " << (double)(a + b + c)/3 << endl;
 }
 ```
-
-### Прямоугольник из звездочек
-```c++
-#include <iostream>
-#include <ctime>
-using namespace std;
-
-void main()
-{
-	setlocale(LC_ALL, "Rus");
-
-	int WIDTH = 0;
-	int HEIGHT = 0;
-
-	cout << "Введите длину: ";
-	cin >> WIDTH;
-	
-	cout << "Введите высоту: ";
-	cin >> HEIGHT;
-
-	for (int j = 0; j < HEIGHT; j++)
-	{
-		for (int i = 0; i < WIDTH; i++)
-		{
-			if (j == 0 or j == HEIGHT - 1 or i == 0 or i == WIDTH - 1)
-			{
-				cout << "*";
-			}
-			else
-			{
-				cout << " ";
-			};
-		};
-		cout << endl;
-	};	
-}
-```
-

@@ -4,10 +4,12 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "ru");
-	
-	int a = 5, b = 2, c;
+	int a, b, c;
 
-	c = 2+2*2;
+	cout << "Введите три числа: " << endl;
+	cin >> a >> b >> c;
 
-	cout << c << endl;
+	cout << "Сумма: " << a + b + c << endl;
+	cout << "Произведение: " << a * b * c << endl;
+	cout << "Среднее: " << (double)(a + b + c)/3 << endl;
 }
