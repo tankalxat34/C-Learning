@@ -3,9 +3,8 @@ using namespace std;
 
 void main()
 {
-	int a = 1;
-	cout << a << endl;
-	
-	cout << a++ << endl;
+	double a = 40;
+	a /= 20;
+	cout << a;
 
 }
