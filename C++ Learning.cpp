@@ -4,6 +4,11 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "ru");
-	int a = 1;
-	cout << a;
+	
+	const int COUNT_DAYS_IN_WEEK = 7;
+
+	const char SIMBOL = 'f';
+
+	cout << COUNT_DAYS_IN_WEEK << SIMBOL;
+	system("pause");
 }
