@@ -3,8 +3,8 @@ using namespace std;
 
 void main()
 {
-	double a = 40;
-	a /= 20;
-	cout << a;
+	int a, b;
+	cin >> a >> b;
 
+	cout << "Result: " << (a && b) << endl;
 }
