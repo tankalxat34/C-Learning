@@ -2,6 +2,7 @@
 
 [![alt](https://img.shields.io/badge/download-exe-green?style=for-the-badge)](https://github.com/tankalxat34/C-Learning/raw/main/Debug/C%2B%2B%20Learning.exe) [![alt](https://img.shields.io/badge/view-cpp-F34B7D?style=for-the-badge)](https://github.com/tankalxat34/C-Learning/blob/main/C%2B%2B%20Learning.cpp)
 
+[![alt](https://img.shields.io/badge/-ONLINE%20COURSE-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/playlist?list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r)
 # C++ Learning
 Here I'm placing my C++ training programs
 
