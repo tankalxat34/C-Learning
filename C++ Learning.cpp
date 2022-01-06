@@ -5,10 +5,9 @@ void main()
 {
 	setlocale(LC_ALL, "ru");
 	
-	const int COUNT_DAYS_IN_WEEK = 7;
+	int Var, Var2; 
 
-	const char SIMBOL = 'f';
+	cin >> Var >> Var2;
 
-	cout << COUNT_DAYS_IN_WEEK << SIMBOL;
-	system("pause");
+	cout << "Вы ввели числа " << Var << " и " << Var2;
 }
