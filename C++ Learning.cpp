@@ -5,9 +5,9 @@ void main()
 {
 	setlocale(LC_ALL, "ru");
 	
-	int Var, Var2; 
+	int a = 5, b = 2, c;
 
-	cin >> Var >> Var2;
+	c = 2+2*2;
 
-	cout << "Вы ввели числа " << Var << " и " << Var2;
+	cout << c << endl;
 }
