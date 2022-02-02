@@ -3,9 +3,17 @@ using namespace std;
 
 void main()
 {
-	int a, b;
-	a = 5;
-	b = 5;
+	setlocale(0, "ru");
 
-	cout << "Result: " << !(a == b) << endl;
+	bool isRain = true;
+
+	if (isRain)
+	{
+		cout << "Возьми зонт!" << endl;
+	}
+	else
+	{
+		cout << "Зонт не нужен!" << endl;
+	}
 }
+
