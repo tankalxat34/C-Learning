@@ -5,15 +5,11 @@ void main()
 {
 	setlocale(0, "ru");
 
-	bool isRain = true;
+	int digit;
 
-	if (isRain)
-	{
-		cout << "Возьми зонт!" << endl;
-	}
-	else
-	{
-		cout << "Зонт не нужен!" << endl;
-	}
+	cout << "Введите число: ";
+	cin >> digit;
+
+	if digit % 
 }
 
