@@ -10,6 +10,13 @@ void main()
 	cout << "Введите число: ";
 	cin >> digit;
 
-	if digit % 
+	if (digit % 2 == 0)
+	{
+		cout << "Число " << digit << " четное" << endl;
+	}
+	else
+	{
+		cout << "Число " << digit << " нечетное" << endl;
+	}
 }
 
