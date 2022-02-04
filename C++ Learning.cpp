@@ -5,18 +5,9 @@ void main()
 {
 	setlocale(0, "ru");
 
-	int digit;
+	int a = 5;
 
-	cout << "Введите число: ";
-	cin >> digit;
+	// остановился на 21 уроке
 
-	if (digit % 2 == 0)
-	{
-		cout << "Число " << digit << " четное" << endl;
-	}
-	else
-	{
-		cout << "Число " << digit << " нечетное" << endl;
-	}
+
 }
-
