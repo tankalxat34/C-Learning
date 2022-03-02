@@ -489,5 +489,103 @@ do
 Этот цикл используется достаточно редко, но всё равно про него не стоит забывать
 
 ## Домашние задания
-№1 - 1. Разработать программу, которая выводит на экран линию из символов. Число символов, какой использовать символ, и какая будет линия - вертикальная, или горизонтальная - указывает пользователь. 
+№1 - 1. Разработать программу, которая выводит на экран линию из 
+символов. Число символов, какой использовать символ, и какая будет 
+линия - вертикальная, или горизонтальная - указывает пользователь. 
+
+Мое решение:
+```c++
+#include <iostream>
+using namespace std;
+
+
+void main()
+{
+	setlocale(0, "ru");
+	
+	int count_of_symbols;
+	int counter = 0;
+	char symbol;
+	int orient;
+
+	cout << "Данная программа выводит линию из символов на экран" << endl;
+
+	cout << "Введите длину линии>>> ";
+	cin >> count_of_symbols;
+
+	cout << "Введите символ>>> ";
+	cin >> symbol;
+
+	cout << "Введите ориентацию\n\n\t1. горизонтальная\n\t2. вертикальная\n\n>>> ";
+	cin >> orient;
+
+	switch (orient)
+	{
+	case 1:
+		while (counter < count_of_symbols)
+		{
+			cout << symbol;
+			counter++;
+		};
+		break;
+	case 2:
+		while (counter < count_of_symbols)
+		{
+			cout << symbol << endl;
+			counter++;
+		}
+		break;
+	default:
+		break;
+	}
+}
+```
+
+Мой второй вариант. Здесь switch находится во внешней части программы. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+
+void main()
+{
+	setlocale(0, "ru");
+	
+	int count_of_symbols;
+	int counter = 0;
+	char symbol;
+	int orient;
+
+	cout << "Данная программа выводит линию из символов на экран" << endl;
+
+	cout << "Введите длину линии>>> ";
+	cin >> count_of_symbols;
+
+	cout << "Введите символ>>> ";
+	cin >> symbol;
+
+	cout << "Введите ориентацию\n\t1. горизонтальная\n\t2. вертикальная\n\n>>> ";
+	cin >> orient;
+
+	while (counter < count_of_symbols)
+	{
+		switch (orient)
+		{
+		case 1:
+			cout << symbol;
+			break;
+		case 2:
+			cout << symbol << endl;
+			break;
+		default:
+			cout << "Введено неверное значение для ориентации. Программа завершена." << endl;
+			break;
+		}
+		counter++;
+	}
+}
+```
+
+
 
