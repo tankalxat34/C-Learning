@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include "paintprint.h"
 
 using namespace std;
 
@@ -13,5 +14,7 @@ void main()
 {
 	setlocale(0, "ru");
 	
-	cout << "\033[92mПривет мир!\033[0m" << endl;
+	cout << "\033[92m" << "Привет мир!" << "\033[0m" << endl;
+
+	cout << RED "Hello world!" << endl;
 }
