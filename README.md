@@ -10,7 +10,7 @@
 
 # Файлы
 - [`C++ Learning.cpp`](https://github.com/tankalxat34/C-Learning/blob/main/C%2B%2B%20Learning.cpp) - главный файл с кодом.
-- [`C-Learning/Debug/C++ Learning.exe`](https://github.com/tankalxat34/C-Learning/raw/main/Debug/C%2B%2B%20Learning.exe) - скомпелированный exe файл.
+- [`C-Learning/Debug/C++ Learning.exe`](https://github.com/tankalxat34/C-Learning/raw/main/Debug/C%2B%2B%20Learning.exe) - скомпилированный exe файл.
 
 # Быстрые советы по С++
 ## Типы данных
