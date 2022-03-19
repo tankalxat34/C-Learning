@@ -4,16 +4,15 @@
 
 [![alt](https://img.shields.io/badge/-ONLINE%20COURSE-ff0000?style=for-the-badge&logo=youtube)](https://www.youtube.com/playlist?list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r)
 # C++ Learning
-Here I'm placing my C++ training programs
+Здесь я размещаю свои записи по ходу изучения С++ по онлайн курсу, автором которого является ютуб канал [SimpleCode](https://www.youtube.com/c/SimpleCodeIT)
 
 @tankalxat34
 
-# How to use?
-- `C++ Learning.cpp` - the main file
+# Файлы
+- [`C++ Learning.cpp`](https://github.com/tankalxat34/C-Learning/blob/main/C%2B%2B%20Learning.cpp) - главный файл с кодом.
+- [`C-Learning/Debug/C++ Learning.exe`](https://github.com/tankalxat34/C-Learning/raw/main/Debug/C%2B%2B%20Learning.exe) - скомпелированный exe файл.
 
-- `C-Learning/Debug/C++ Learning.exe` - exe file
-
-# Quick tips
+# Быстрые советы по С++
 ## Типы данных
 
 |  Тип   | Размер в байтах |                                    Пояснение                                     |      Диапазон значений      |
