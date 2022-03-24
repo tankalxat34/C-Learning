@@ -590,4 +590,41 @@ void main()
 ### №2
 Написать программу, которая находит сумму всех целых нечетных чисел в диапазоне, указанном пользователем.
 
+Мое решение:
+```c++
+#include <iostream>
+using namespace std;
 
+/* Написать программу, которая находит сумму всех целых нечетных чисел в диапазоне, 
+указанном пользователем. */
+
+void main()
+{
+	setlocale(0, "ru");
+
+	int start_number;
+	int end_number;
+	int local_number;
+	int sum = 0;
+
+	cout << "Данная программа находит сумму всех целых нечетных чисел в поьзовальтельском диапазоне" << endl;
+	
+	cout << "Начало диапазона: ";
+	cin >> start_number;
+
+	cout << "Конец диапазона: ";
+	cin >> end_number;
+
+	local_number = start_number;
+	while (local_number < end_number)
+	{
+		if (local_number % 2 != 0)
+		{
+			// если число нечетное - прибавляем к сумме
+			sum = sum + local_number;
+		};
+		local_number++;
+	};
+	cout << "Искомая сумма: " << sum << endl;
+}
+```
