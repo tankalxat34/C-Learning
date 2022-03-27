@@ -14,6 +14,5 @@ void main()
 	{
 		cout << rand() % 10 + 5 << endl;
 	};
-	// system("explorer.exe C:\\Users\\podst\\OneDrive\\Рабочий стол\\РАНХиГС\\РАНХиГС Литература и Лекции\\Логика\\27.10.2021\\");
 }
 
