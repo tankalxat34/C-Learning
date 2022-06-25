@@ -5,21 +5,25 @@ void main()
 {
 	setlocale(0, "ru");
 	
-	int width;
-	int height;
+	double c;
+	double shot;
 
-	cout << "Введите ширину прямоугольника: ";
-	cin >> width;
+	cout << "Введите число: ";
+	cin >> c;
 
-	cout << "Введите высоту прямоугольника: ";
-	cin >> height;
+	int i = 2;
 
-	for (int h = 0; h < height; h++)
-	{
-		for (int w = 0; w < width; w++)
-		{
-			cout << "*";
+	for (i; i < c; i++) {
+		if (i * i > c) {
+			i--;
+			break;
 		}
-		cout << endl;
+		else if (i * i == c) {
+			break;
+		}
 	}
+
+	shot = (c - i * i) / (double)(2*i);
+
+	cout << "sqrt(" << c << ") = " << i + shot << endl;
 }
