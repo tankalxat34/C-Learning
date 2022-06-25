@@ -5,16 +5,13 @@ void main()
 {
 	setlocale(0, "ru");
 	
-	cout << "начало цикла" << endl;
+	int a = 6;
 
-	for (int i = 0; i < 10; i++) {
-		if (i == 5) {
-			continue;
-		}
-		cout << "переменная i = " << i << endl;
-	}
+	int b = 5;
 
-	cout << "конец цикла" << endl;
+	int c;
 
+	c = a + b;
 
+	cout << c << endl;
 }
