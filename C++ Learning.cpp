@@ -7,24 +7,14 @@ void main()
 	
 	cout << "начало цикла" << endl;
 
-	for (int i = 0; ; i++) {
-		cout << "переменная i = " << i << endl;
-		if (i == 20) {
-			break;
+	for (int i = 0; i < 10; i++) {
+		if (i == 5) {
+			continue;
 		}
+		cout << "переменная i = " << i << endl;
 	}
 
 	cout << "конец цикла" << endl;
-
-
-	int i = 0;
-
-	while (true) {
-		cout << "i = " << ++i << endl;
-		if (i == 6) {
-			break;
-		}
-	}
 
 
 }
