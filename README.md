@@ -800,3 +800,60 @@ void main()
 один
 пять
 ```
+
+# Вложенные циклы
+
+Нужны для реализации более сложных алгоритмов (например: сортировка массива, работа в n-мерными циклами).
+
+Пример простого вложенного цикла:
+
+```c++
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	setlocale(0, "ru");
+	
+	for (int i = 0; i < 10; i++) {
+		cout << "1й цикл итерация №" << i << endl;
+		for (int j = 0; j < 10; j++) {
+			cout << "\t2й цикл итерация №" << j << endl;
+		}
+	}
+}
+```
+
+## [Домашнее задание](https://www.youtube.com/watch?v=k1s1tnoVH9U&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=32)
+
+Написать программу с помощью вложенных циклов, которая выводит прямоугольник на экран.
+
+Мой код:
+
+```c++
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	setlocale(0, "ru");
+	
+	int width;
+	int height;
+
+	cout << "Введите ширину прямоугольника: ";
+	cin >> width;
+
+	cout << "Введите высоту прямоугольника: ";
+	cin >> height;
+
+	for (int h = 0; h < height; h++)
+	{
+		for (int w = 0; w < width; w++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+```

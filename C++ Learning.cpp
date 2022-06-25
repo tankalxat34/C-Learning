@@ -5,13 +5,21 @@ void main()
 {
 	setlocale(0, "ru");
 	
-	int a = 6;
+	int width;
+	int height;
 
-	int b = 5;
+	cout << "Введите ширину прямоугольника: ";
+	cin >> width;
 
-	int c;
+	cout << "Введите высоту прямоугольника: ";
+	cin >> height;
 
-	c = a + b;
-
-	cout << c << endl;
+	for (int h = 0; h < height; h++)
+	{
+		for (int w = 0; w < width; w++)
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
 }
