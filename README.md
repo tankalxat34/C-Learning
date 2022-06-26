@@ -948,3 +948,53 @@ int arr[10]{1, 66, 12, 2};
 ```c++
 int arr[4]{};
 ```
+
+## [Вывод массива на экран](https://www.youtube.com/watch?v=gKOgCG1PHKI&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=35)
+
+Код:
+
+```c++
+#include <iostream>
+using namespace std;
+
+void main()
+{
+	setlocale(0, "ru");
+
+	const int SIZE = 10;
+
+	int arr[SIZE]{};
+
+	for (int i = 0; i < SIZE; i++) {
+		cout << arr[i] << endl;
+	}
+}
+```
+
+## [Ключевое слово `sizeof`](https://www.youtube.com/watch?v=8-HR57Jfaz4&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=36)
+
+**`sizeof`** - Возвращает длину в байтах типа данных либо переменной, которую мы используем вместе с этим ключевым словом.
+
+Пример:
+
+```c++
+cout << sizeof(4) << endl;
+```
+
+### Пробежка по элементам массива
+
+Измерение количества элементов массива:
+
+```c++
+int arr[]{ 5, 33, 545, 111, 326 };
+cout << sizeof(arr) / sizeof(int) << endl; // вернет 5
+```
+
+Вес массива в байтах в памяти (20 байта) делим на вес типа int (4 байта) даст нам **5 байт**.
+
+Самый универсальный способ:
+
+```c++
+int arr[]{ 5, 33, 545, 111, 326 };
+cout << sizeof(arr) / sizeof(arr[0]) << endl; // не зависит от типа данных в массиве
+```

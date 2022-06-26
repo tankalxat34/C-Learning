@@ -5,7 +5,11 @@ void main()
 {
 	setlocale(0, "ru");
 
-	int arr[10] = {1, 66, 12, 2};
-	
-	cout << arr[3] << endl;
+	int arr[]{ 5, 33, 545, 111, 326 };
+
+	for (int i = 0; i < sizeof(arr) / sizeof(int); i++)
+	{
+		cout << arr[i] << endl;
+	}
+
 }
