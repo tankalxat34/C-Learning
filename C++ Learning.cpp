@@ -4,26 +4,13 @@ using namespace std;
 void main()
 {
 	setlocale(0, "ru");
-	
-	double c;
-	double shot;
 
-	cout << "Введите число: ";
-	cin >> c;
+	int arr[4];
 
-	int i = 2;
+	arr[0] = 5;
+	arr[1] = 7;
+	arr[2] = 10;
+	arr[3] = 3333;
 
-	for (i; i < c; i++) {
-		if (i * i > c) {
-			i--;
-			break;
-		}
-		else if (i * i == c) {
-			break;
-		}
-	}
-
-	shot = (c - i * i) / (double)(2*i);
-
-	cout << "sqrt(" << c << ") = " << i + shot << endl;
+	cout << arr[55555] << endl;
 }
