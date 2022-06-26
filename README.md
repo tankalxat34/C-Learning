@@ -1140,7 +1140,7 @@ a[строка][столбец]
 cout << a[0][0] << endl;
 ```
 
-## Инициализация двумерного массива
+## [Инициализация двумерного массива](https://www.youtube.com/watch?v=JqwUUCZe62M&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=41)
 
 ```c++
 const int ROW = 2, COL = 4;
@@ -1149,7 +1149,7 @@ const int ROW = 2, COL = 4;
 int arr[ROW][COL];
 
 // инициализация массива с нулями
-int arr[ROW][COL];
+int arr[ROW][COL]{};
 
 // инициализация массива сразу
 int arr[ROW][COL]
