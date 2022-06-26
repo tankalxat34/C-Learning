@@ -8,35 +8,15 @@ void main()
 
 	srand(time(NULL));
 
-	const int SIZE = 10;
-	int arr[SIZE];
+	const int ROW = 3, COL = 4;
 
-	int a;
+	int arr[ROW][COL]{};
 
-	for (int i = 0; i < SIZE; i++) {
-		a = rand() % 20;
-		for (int j = 0; j < i; ) {
-			if (a == arr[j]) {
-				a = rand() % 20;
-				j = 0;
-			}
-			else {
-				j++;
-			}
-		}
-		arr[i] = a;
-	}
-
-	for (int i = 0; i < SIZE; i++) {
-		cout << arr[i] << endl;
-	}
-	cout << "************************" << endl;
-
-	int minDigit = arr[0];
-	for (int i = 1; i < SIZE; i++) {
-		if (arr[i] < minDigit) {
-			minDigit = arr[i];
+	for (int rows = 0; rows < ROW; rows++) {
+		for (int columns = 0; columns < COL; columns++) {
+			arr[rows][columns] = rand() % 10;
 		}
 	}
-	cout << "Минимальное число: " << minDigit << endl;
+
+
 }
