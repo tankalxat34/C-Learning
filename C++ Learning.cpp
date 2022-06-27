@@ -2,21 +2,18 @@
 #include <ctime>
 using namespace std;
 
+void foo() {
+	cout << "Я функция, меня вызвали!" << endl;
+};
+
+int summa(int a, int b) {
+	return a + b;
+}
+
 void main()
 {
 	setlocale(0, "ru");
 
-	srand(time(NULL));
-
-	const int ROW = 3, COL = 4;
-
-	int arr[ROW][COL]{};
-
-	for (int rows = 0; rows < ROW; rows++) {
-		for (int columns = 0; columns < COL; columns++) {
-			arr[rows][columns] = rand() % 10;
-		}
-	}
-
+	cout << summa(5, 3) << endl;
 
 }
