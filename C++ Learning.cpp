@@ -1,29 +1,20 @@
 ﻿#include <iostream>
 using namespace std;
 
-void fillArray(int arr[], const int SIZE) {
-	for (int i = 0; i < SIZE; i++) {
-		arr[i] = rand() % 10;
-	}
-}
+void foo(int n);
 
-void coutArray(int arr[], const int SIZE) {
-	for (int i = 0; i < SIZE; i++) {
-		cout << arr[i] << endl;
-	}
-}
 
 void main()
 {
 	setlocale(0, "ru");
+	foo(5);
 
-	const int SIZE = 10;
+}
 
-	int arr[SIZE];
-
-	coutArray(arr, SIZE);
-	fillArray(arr, SIZE);
-	coutArray(arr, SIZE);
-
-	int a;
+void foo(int n)
+{
+	if (n > 0) {
+		foo(n - 1);
+	}
+	cout << "Я функция и меня вызвали!" << endl;
 }
