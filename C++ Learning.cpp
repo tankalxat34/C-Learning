@@ -1,17 +1,29 @@
 ﻿#include <iostream>
 using namespace std;
 
-int foo(int a) {
-	return ++a;
-};
+void fillArray(int arr[], const int SIZE) {
+	for (int i = 0; i < SIZE; i++) {
+		arr[i] = rand() % 10;
+	}
+}
+
+void coutArray(int arr[], const int SIZE) {
+	for (int i = 0; i < SIZE; i++) {
+		cout << arr[i] << endl;
+	}
+}
 
 void main()
 {
 	setlocale(0, "ru");
 
-	int a = 1;
+	const int SIZE = 10;
 
-	a = foo(a);
+	int arr[SIZE];
 
-	cout << a << endl;
+	coutArray(arr, SIZE);
+	fillArray(arr, SIZE);
+	coutArray(arr, SIZE);
+
+	int a;
 }

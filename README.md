@@ -1219,3 +1219,47 @@ void main()
 	cout << a << endl;
 }
 ```
+
+## [Передача массива в функцию](https://www.youtube.com/watch?v=r1wWlUCZW08&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=45)
+
+**Массив не передается по значению** - мы можем передавать массив в функцию, которая его будет изменять, не боясь того, что массив не будет изменен в функции `main`. Тут передается **указатель массива**.
+
+**Указатель** - так называемый "ярлычок", который ссылается (указывает) на переменную/массив и т.п.
+
+В нашем случае **имя массива есть указатель на этот массив**.
+
+Код с урока:
+
+```c++
+#include <iostream>
+using namespace std;
+
+void fillArray(int arr[], const int SIZE) {
+	for (int i = 0; i < SIZE; i++) {
+		arr[i] = rand() % 10;
+	}
+}
+
+void coutArray(int arr[], const int SIZE) {
+	for (int i = 0; i < SIZE; i++) {
+		cout << arr[i] << endl;
+	}
+}
+
+void main()
+{
+	setlocale(0, "ru");
+
+	const int SIZE = 10;
+
+	int arr[SIZE];
+
+	coutArray(arr, SIZE);
+	fillArray(arr, SIZE);
+	coutArray(arr, SIZE);
+
+	int a;
+}
+```
+
+Передавать размер массива в функцию обработки массива НЕОБХОДИМО, так как при измерении количества элементов через `sizeof` мы измерим **указатель (ярлык на массив)**, а **не сам массив**.
