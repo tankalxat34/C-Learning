@@ -1171,3 +1171,51 @@ int arr[ROW][COL]
 	return некое_значение;
 }
 ```
+
+## [Передача аргументов (параметров)](https://www.youtube.com/watch?v=0QvNhSN_ivs&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=44)
+
+Код ниже выведет на экран `1`:
+
+```c++
+#include <iostream>
+using namespace std;
+
+void foo(int a) {
+	a++;
+};
+
+void main()
+{
+	setlocale(0, "ru");
+
+	int a = 1;
+
+	foo(a);
+
+	cout << a << endl;
+}
+```
+
+Аргументы функции никак не относятся к переменным, поэтому при передаче `a` в качестве параметра `a` функции `foo()` в результате переменная `a` не изменилась, так как функция ничего не вернула.
+
+А такой код выведет на экран цифру 2:
+
+```c++
+#include <iostream>
+using namespace std;
+
+int foo(int a) {
+	return ++a;
+};
+
+void main()
+{
+	setlocale(0, "ru");
+
+	int a = 1;
+
+	a = foo(a);
+
+	cout << a << endl;
+}
+```

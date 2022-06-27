@@ -1,19 +1,17 @@
 ﻿#include <iostream>
-#include <ctime>
 using namespace std;
 
-void foo() {
-	cout << "Я функция, меня вызвали!" << endl;
+int foo(int a) {
+	return ++a;
 };
-
-int summa(int a, int b) {
-	return a + b;
-}
 
 void main()
 {
 	setlocale(0, "ru");
 
-	cout << summa(5, 3) << endl;
+	int a = 1;
 
+	a = foo(a);
+
+	cout << a << endl;
 }
