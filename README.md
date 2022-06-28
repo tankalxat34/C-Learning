@@ -1275,3 +1275,29 @@ void foo();
 ```
 
 Обычно прототипы объявляют вверху файла с программой.
+
+# [Области видимости. Глобальные и локальные переменные](https://www.youtube.com/watch?v=a8L1nu4EByI&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=47)
+
+Сразу код:
+
+```c++
+#include <iostream>
+using namespace std;
+
+
+void main()
+{
+	setlocale(0, "ru");
+	
+	if (true)
+	{
+		int a;
+		
+		a = 0;
+		a++;
+	}
+
+	a++; // здесь переменная a не видна, так как она ограничена тем блоком, в котором она объявлена
+
+}
+```
